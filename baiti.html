@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>baiti</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+    <body>
+    <script>
+    function calculate(a){
+        console.log("bruuh");
+            let amountthingy = a;
+            let seconds = parseFloat(document.getElementById('sekundes').value);
+            console.log(amountthingy);
+            console.log(seconds);
+            document.getElementById('atbilde').value = parseFloat(amountthingy * 31250 * seconds);
+     }   
+     
+    function smthReset() {
+        document.getElementById("sekundes").value = "";
+        document.getElementById("atbilde").value = "";
+        document.getElementById("formthing").reset();
+    }
+    </script>
+        <p>Aprēķināt cik daudz informācijas var lejuplādēt</p>
+        <input type="number" id="sekundes" onclick="smthReset()">
+        <p style="display: inline;">sekundēs, ja interneta ātrums ir 25Mbps<p/>
+        <p> Atbilde </p>
+        <input type="number" id="atbilde">
+        <form style="display: inline;" id="formthing">
+          <input type="radio" id="KiB" onclick="calculate(0.9765625)" name="mervienibas">
+          <label for="KiB">KiB</label>
+          <input type="radio" id="KB" onclick="calculate(1)" name="mervienibas" >
+          <label for="KB">KB</label>
+        </form>
+    </body>
+</html>
